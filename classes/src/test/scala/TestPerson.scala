@@ -15,4 +15,11 @@ class TestPerson extends FunSuite {
     assert(person.name === name)
   }
 
+  test("Eyes must be set and retrived") {
+    val (rightEye:String, leftEye:String) = ("Brown", "Brown")
+    val person:Person = new Person("Jeff")
+    person.createEyes(Array(rightEye, leftEye))
+    assert(person.rightEye.color === rightEye && person.leftEye.color === leftEye)
+  }
+
 }
